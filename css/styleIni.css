@@ -1,0 +1,11 @@
+header{
+	
+	background: url("../img/header-pattern.gif");
+	height: 9%;
+	border-top: 5px #e31414 solid;
+}
+
+.brand h3{
+	color: #fff;
+	text-shadow:1px 1px 0 rgba(0, 0, 0, .75);
+}

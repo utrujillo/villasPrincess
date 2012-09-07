@@ -1,0 +1,79 @@
+body,html{ background-color: #F5F5F5; }
+section{ margin-top: 4%; }
+
+/*====================================
+			Sub Menu
+======================================*/
+
+.subMenu{
+	border               : 1px #BEC2C8 solid;
+	border-radius        : 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius   : 5px;
+	-ie-border-radius    : 5px;
+	-o-border-radius     : 5px;
+	margin               : 10px 0;
+	background-color: #ffffff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.subMenu li{
+	line-height: 2.5em;
+	border-bottom: 1px #BEC2C8 solid;
+}
+
+.subMenu li:last-child, .subMenu li:first-child{
+	border-bottom: none;
+}
+
+.subMenu .icon-chevron-right {
+    float: right;
+    margin-right: -6px;
+    margin-top: 10px;
+    opacity: 0.25;
+}
+
+.subMenu .badge{
+	float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/*====================================
+			Formularios
+======================================*/
+
+.data-block {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15), 0 4px 0 -3px #FFFFFF, 0 4px 0 -2px #BEC2C8, 0 8px 0 -5px #FFFFFF, 0 8px 0 -4px #BEC2C8;
+    color: #525459;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.data-block .data-container {
+    -moz-box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #BEC2C8;
+    border-radius: 2px 2px 0 0;
+    padding: 23px 23px 3px;
+}
+
+.data-block .title {
+    border-bottom: 1px solid #DEDEDE;
+    margin-bottom: 20px;
+}
+
+.txtRight{ text-align: right; }
+
+/*====================================
+				Tablas
+======================================*/
+table tbody tr td{ vertical-align: middle !important; }
+
+table .options{ width:70px; }
+
+table.table {
+	clear: both;
+	margin-bottom: 6px !important;
+}
+
+table .txtCenter{ text-align: center; }
