@@ -9,21 +9,16 @@ $(function(){
         //                                                     Panel de Administración
         //============================================================================
 
-<<<<<<< HEAD
+
         // Tooltips
         $('body').tooltip({ selector: '[rel=tooltip]' });
-=======
->>>>>>> 6379b2394be4ad31d5afcb1f60ffd552b7fbb3b9
+
 
         // ==================== Nuevo Usuario
         
         $(".newUser").click(function(){
-                
-<<<<<<< HEAD
-                $("#displayContent").load("usuario/new.php");
-=======
-                $("#displayContent").load("usuario/newUser.php");
->>>>>>> 6379b2394be4ad31d5afcb1f60ffd552b7fbb3b9
+
+            $("#displayContent").load("usuario/new.php");
 
         });
 
@@ -51,12 +46,6 @@ $(function(){
                           type: 'POST',
                           dataType: 'html',
                           data: allData,
-<<<<<<< HEAD
-=======
-                          complete: function(xhr, textStatus) {
-                            //called when complete
-                          },
->>>>>>> 6379b2394be4ad31d5afcb1f60ffd552b7fbb3b9
                           success: function(data, textStatus, xhr) {
                                 
                                 if( data.length == 33 ){
@@ -80,21 +69,11 @@ $(function(){
 
                             $( "#frmNuevoUsuario" )[0].reset();
 
-<<<<<<< HEAD
                           }//success
 
                         });//ajax
 
                 }//required                
-=======
-                          },
-                          error: function(xhr, textStatus, errorThrown) {
-                            //called when there is an error
-                          }
-                        });
-                }
-                
->>>>>>> 6379b2394be4ad31d5afcb1f60ffd552b7fbb3b9
 
         }); // createUser       
 
@@ -103,7 +82,6 @@ $(function(){
         
         $(".showUsers").click(function(){
                 
-<<<<<<< HEAD
             $("#displayContent").load("usuario/show.php");
 
         });
@@ -204,13 +182,6 @@ $(function(){
               });
 
 
-
-=======
-            $("#displayContent").load("usuario/showUsers.php");
-
-        });
-
->>>>>>> 6379b2394be4ad31d5afcb1f60ffd552b7fbb3b9
         //============================================================================
         //                                                          Carga de Archivos
         //============================================================================
@@ -250,12 +221,7 @@ $(function(){
               case "verEdoCuenta" : $("#displayContent").load("acceso/estadoCuenta.php"); break;
             }            
 
-<<<<<<< HEAD
         });
 
-=======
-        })
-              
->>>>>>> 6379b2394be4ad31d5afcb1f60ffd552b7fbb3b9
 
 });
