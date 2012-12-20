@@ -3,6 +3,7 @@
         include_once("../scripts/conecta.inc.php");
         $conexion = new Conexion( "villas" );
 
+
         
         $abc               = $_POST["abc"];
         $idUsuario         = $_POST["idUsuario"];
@@ -21,6 +22,7 @@
         $sql = "";
 
         if( $abc == "a" ){
+
 
                 $sql = "INSERT INTO usuario_tbl(nombre, apellidoPaterno, apellidoMaterno, usuario, password, nivelAcceso, correoElectronico, telefono, noPropiedad, fechaCreado) 
                         VALUES('". $nombre ."','". $apellidoPaterno ."', '". $apellidoMaterno ."', '". $usuario ."', '". $password ."', '". $nivelAcceso ."', '". $correoElectronico ."', '". $telefono ."', '". $noPropiedad ."', NOW() )";
