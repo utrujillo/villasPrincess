@@ -9,12 +9,14 @@ $(function(){
         //                                                     Panel de Administración
         //============================================================================
 
+        // Tooltips
+        $('body').tooltip({ selector: '[rel=tooltip]' });
 
         // ==================== Nuevo Usuario
         
         $(".newUser").click(function(){
                 
-                $("#displayContent").load("usuario/newUser.php");
+                $("#displayContent").load("usuario/new.php");
 
         });
 
@@ -42,9 +44,6 @@ $(function(){
                           type: 'POST',
                           dataType: 'html',
                           data: allData,
-                          complete: function(xhr, textStatus) {
-                            //called when complete
-                          },
                           success: function(data, textStatus, xhr) {
                                 
                                 if( data.length == 33 ){
@@ -68,13 +67,11 @@ $(function(){
 
                             $( "#frmNuevoUsuario" )[0].reset();
 
-                          },
-                          error: function(xhr, textStatus, errorThrown) {
-                            //called when there is an error
-                          }
-                        });
-                }
-                
+                          }//success
+
+                        });//ajax
+
+                }//required                
 
         }); // createUser       
 
@@ -83,9 +80,106 @@ $(function(){
         
         $(".showUsers").click(function(){
                 
-            $("#displayContent").load("usuario/showUsers.php");
+            $("#displayContent").load("usuario/show.php");
 
         });
+
+              // Información de Usuario
+              $(document).on("click", ".viewUser", function(){
+                   
+                  var idUser = $( this ).attr("toId");
+                  $.colorbox({ width:"50%", height:"350px", href: "usuario/view.php", data: { id: idUser } });
+
+              });
+
+              // Editar Usuario
+              $(document).on("click", ".editUser", function(){
+                  
+                  var idUser = $( this ).attr("toId");
+                  $.colorbox({ width:"50%", height:"650px", href: "usuario/edit.php", data: { id: idUser } });
+
+              });
+
+             
+                  $(document).on("click", "#editUser", function( evt ){
+
+                    $("#statusForm").css("display","none");
+                    
+                    var allData = $("#frmEditUsuario").serializeArray();
+                    var required = 0;
+                    
+                     $("#frmEditUsuario").find(':input').each(function( index, element ){
+                            
+                            e = $(element)
+                            if( (e.val() == "") && e.attr('required') ){ required++ }
+
+                     });
+
+
+                    if( required == 0 ){
+                            
+                            evt.preventDefault();
+
+                            $.ajax({
+                              url: 'usuario/abcUsuario.php',
+                              type: 'POST',
+                              dataType: 'html',
+                              data: allData,
+                              success: function(data, textStatus, xhr) {
+                                    
+                                    if( data.length == 33 ){
+                                        
+                                            message = '<div class="alert alert-success">';
+                                            message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                            message += '<strong><i class="icon-thumbs-up"></i>&nbsp;Felicidades!!</strong> ' + data;
+                                            message += '</div>';
+
+                                             $("#displayContent").load("usuario/show.php");
+
+                                    }else{
+                                            
+
+                                            message = '<div class="alert alert-error">';
+                                            message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                            message += '<strong><i class="icon-remove-sign"></i>&nbsp;Lo sentimos, ha ocurrido un error!!</strong><br />' + data;
+                                            message += '</div>';
+                    
+                                    }
+                            
+                                $( "#statusForm" ).fadeIn("slow").html( message );
+
+                              }//success
+
+                            });//ajax
+                    }//required
+                    
+
+                  }); // #editUser
+
+              
+              // Eliminar Usuario
+              $(document).on('click','[data-toggle=modal]', function(){
+        
+                  var toId = $(this).attr("toId");          
+                  $("#delHd").val( toId );
+                  $( "#myModal" ).modal();
+                      
+              });
+
+              $('.delUser').click(function(){
+                  var toId = $("#delHd").val();
+                  
+                  $.post('usuario/abcUsuario.php', { idUsuario: toId, abc: "b" }, function(data, textStatus, xhr) {
+                      
+                      $("#displayContent").load("usuario/show.php");
+                      $( "#myModal" ).modal("hide");
+                      
+                  });
+                  
+                  
+              });
+
+
 
         //============================================================================
         //                                                          Carga de Archivos
@@ -106,7 +200,7 @@ $(function(){
                   case "comite"       : $("#uploaderFile").load("fileUploader/comite.html");      break;
                   case "asamblea"     : $("#uploaderFile").load("fileUploader/asamblea.html");    break;
                   case "comunicado"   : $("#uploaderFile").load("fileUploader/comunicado.html");  break;
-                  case "estadoCuenta" : $("#uploaderFile").load("fileUploader/comunicado.html");  break;
+                  case "estadoCuenta" : $("#uploaderFile").load("fileUploader/estadoCuenta.html");  break;
                 }         
 
             });
@@ -126,7 +220,7 @@ $(function(){
               case "verEdoCuenta" : $("#displayContent").load("acceso/estadoCuenta.php"); break;
             }            
 
-        })
-              
+        });
+
 
 });
