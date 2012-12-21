@@ -11,5 +11,8 @@
  */
 
 error_reporting(E_ALL | E_STRICT);
+
+// $id = $_POST["cliente"];
+
 require('UploadHandler.php');
 $upload_handler = new UploadHandler();

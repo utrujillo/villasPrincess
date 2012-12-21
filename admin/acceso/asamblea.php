@@ -3,8 +3,7 @@
     $dir        = '../fileUploader/server/asamblea/files/';
     $dirPath    = 'fileUploader/server/asamblea/files/';
     $fileReader = new fileReader($dir, $dirPath);
-    $archivos   = $fileReader->read();  
-
+    $archivos   = $fileReader->read(); 
 ?>
 
 <table role="presentation" class="table table-striped">
@@ -16,7 +15,8 @@
         </tr>
     </thead>
     <tbody class="files">
-    	<?php 
+    	<?php
+         if( sizeof( $archivos ) > 0 ): 
     		foreach($archivos as $archivo): 
     			$path = $dirPath.$archivo;
     	?>
@@ -30,7 +30,9 @@
 	    		</td>
 	    	</tr>
 
-    	<?php endforeach; ?>
+    	<?php endforeach; 
+        endif;
+        ?>
     </tbody>
 </table>
     

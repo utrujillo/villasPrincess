@@ -17,6 +17,7 @@
     </thead>
     <tbody class="files">
     	<?php 
+        if( sizeof( $archivos ) > 0 ):
     		foreach($archivos as $archivo): 
     			$path = $dirPath.$archivo;
     	?>
@@ -30,7 +31,9 @@
 	    		</td>
 	    	</tr>
 
-    	<?php endforeach; ?>
+    	<?php endforeach; 
+        endif;
+        ?>
     </tbody>
 </table>
     
