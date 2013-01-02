@@ -64,6 +64,10 @@ section{ margin-top: 4%; }
 
 .txtRight{ text-align: right; }
 
+.ui-autocomplete-loading {
+    background: white url('../img/ajax-loader.gif') right center no-repeat;
+}
+
 /*====================================
 			Boton
 ======================================*/

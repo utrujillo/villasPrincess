@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../css/bootstrap.css" />
 	<link rel="stylesheet" href="../css/styleAdmin.css" />
 	<link rel="stylesheet" href="../css/colorbox.css" />
+	<link rel="stylesheet" href="../css/villasTheme/jquery-ui.custom.css" />
 	<!-- FileUploader -->
 	<link rel="stylesheet" href="fileUploader/css/jquery.fileupload-ui.css">
 	<noscript><link rel="stylesheet" href="fileUploader/css/jquery.fileupload-ui-noscript.css"></noscript>
@@ -119,8 +120,8 @@
 	
 	</div>
 	
-
 	<script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-ui.custom.js"></script>  
     <script src="../js/bootstrap.js"></script>
     <script src="../js/jquery.colorbox.js"></script>
     <script src="../js/core.js"></script>
