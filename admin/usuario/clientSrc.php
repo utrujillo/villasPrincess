@@ -1,6 +1,6 @@
 <?php
 	include_once("../scripts/conecta.inc.php");
-    $conexion = new Conexion( "villas" );
+    $conexion = new Conexion();
 
     $user = $_GET['term'];
 

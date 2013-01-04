@@ -294,6 +294,7 @@
             // Callback for file deletion:
             destroy: function (e, data) {
                 var that = $(this).data('fileupload');
+                data.url += "&folderItem="+ $("#idUsuario").val();
                 if (data.url) {
                     $.ajax(data);
                     that._adjustMaxNumberOfFiles(1);

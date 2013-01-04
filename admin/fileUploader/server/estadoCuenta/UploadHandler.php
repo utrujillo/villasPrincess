@@ -34,13 +34,14 @@ class UploadHandler
         'min_height' => 'Image requires a minimum height'
     );
 
-    function __construct($options = null, $initialize = true) {
+    function __construct($options = null, $initialize = true, $idUser) {
         $this->options = array(
             'script_url' => $this->get_full_url().'/',
-            'upload_dir' => dirname($_SERVER['SCRIPT_FILENAME']).'/files/',
-            'upload_url' => $this->get_full_url().'/files/',
+            'upload_dir' => dirname($_SERVER['SCRIPT_FILENAME']).'/files/'. $idUser .'/',
+            'upload_url' => $this->get_full_url().'/files/'. $idUser .'/',
             'user_dirs' => false,
-            'mkdir_mode' => 0755,
+            // 'mkdir_mode' => 0755,
+            'mkdir_mode' => 0777,
             'param_name' => 'files',
             // Set the following option to 'POST', if your server does not support
             // DELETE requests. This is a parameter sent to the client:

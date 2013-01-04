@@ -11,8 +11,20 @@
  */
 
 error_reporting(E_ALL | E_STRICT);
-
-// $id = $_POST["cliente"];
-
 require('UploadHandler.php');
-$upload_handler = new UploadHandler();
+
+if( isset($_POST["idUsuario"]) ){
+
+	$id = $_POST["idUsuario"];		
+	$upload_handler = new UploadHandler( $options = null, $initialize = true, $id );
+
+}else if( isset($_GET["item"]) ){
+
+	$id = $_GET["item"];
+	$upload_handler = new UploadHandler( $options = null, $initialize = true, $id );
+
+	}else if( isset( $_GET["folderItem"] ) ){
+		$id = $_GET["folderItem"];
+		$upload_handler = new UploadHandler( $options = null, $initialize = true, $id );
+
+	}

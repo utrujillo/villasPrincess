@@ -1,7 +1,7 @@
 <?php
         
         include_once("../scripts/conecta.inc.php");
-        $conexion = new Conexion( "villas" );
+        $conexion = new Conexion();
 
 
         
@@ -17,7 +17,8 @@
         $correoElectronico = $_POST["correoElectronico"];
         $telefono          = $_POST["telefono"];
         $noPropiedad       = $_POST["noPropiedad"];
-        $nivelAcceso       = $_POST["nivelAcceso"];
+
+        ( isset($_POST["nivelAcceso"]) )?( $nivelAcceso = $_POST["nivelAcceso"] ):( $nivelAcceso = 'A' );
 
         $sql = "";
 
@@ -30,7 +31,9 @@
         }
 
         if( $abc == "b" ){
+                
                 $sql = "UPDATE usuario_tbl set estatus = '0' WHERE idUsuario = ". $idUsuario;        
+                
         }
 
 
@@ -39,6 +42,12 @@
                 $sql = "UPDATE usuario_tbl SET nombre = '". $nombre ."', apellidoPaterno = '". $apellidoPaterno ."', apellidoMaterno = '". $apellidoMaterno ."', usuario = '". $usuario ."',
                                 nivelAcceso = '". $nivelAcceso ."', correoElectronico = '". $correoElectronico ."', telefono = '". $telefono ."', noPropiedad = '". $noPropiedad ."' 
                                 WHERE idUsuario = ". $idUsuario;
+
+        }
+
+        if( $abc == "d" ){
+
+                $sql = "UPDATE usuario_tbl SET password = '". $password ."' WHERE idUsuario = ". $idUsuario;
 
         }
 

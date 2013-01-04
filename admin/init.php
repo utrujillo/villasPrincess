@@ -24,11 +24,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          
 
           <a class="brand" href="#"><img src="../img/logoVillasWhite.png" width="20" heigth="20" /></a>
-
-
 
           <a class="brand" href="#">Villas I Princess</a>
           <div class="nav-collapse collapse">
@@ -37,7 +34,8 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-white"></i>&nbsp;Preferencias <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Actualizar Información</a></li>
+                  <li><a href="#" toId="<?php echo $_SESSION['iduser']; ?>" class="editUser">Actualizar Información</a></li>
+                  <li><a href="#" toId="<?php echo $_SESSION['iduser']; ?>" class="passUser">Cambiar Contraseña</a></li>
                 </ul>
               </li>
               <li><a href="logout.php"><i class="icon-off icon-white"></i>&nbsp;Salir</a></li>
@@ -53,14 +51,16 @@
 			<!-- /SubMenu Principal -->
 			<aside class="span3">
 				<div class="row-fluid">
-						
+				
+				<input type="hidden" id="lvl" value="<?php echo base64_encode( $_SESSION['tipou'] ); ?>">
 				<ul class="nav nav-list subMenu">
 					<li class="active"><a href="#"><i class="icon-star white"></i>&nbsp;Opciones Disponibles</a></li>
 					<li toView="verReglamento" class="ver"><a href="#"><i class="icon-pencil"></i><i class="icon-chevron-right"></i>&nbsp;Reglamentos</a></li>
 					<li toView="verComite" class="ver"><a href="#"><i class="icon-list-alt"></i><i class="icon-chevron-right"></i>&nbsp;Comite de Vigilancia</a></li>
 					<li toView="verAsamblea" class="ver"><a href="#"><i class="icon-hand-up"></i><i class="icon-chevron-right"></i>&nbsp;Asambleas</a></li>
-					<li toView="verComunicado" class="ver"><a href="#"><i class="icon-bullhorn"></i><i class="icon-chevron-right"></i>&nbsp;Comunicados<span class="badge badge-important">7</span></a></li>
-					<li toView="verEdoCuenta" class="ver"><a href="#"><i class="icon-book"></i><i class="icon-chevron-right"></i>&nbsp;Estados de Cuenta<span class="badge badge-important">1</span></a></a></li>
+					<!-- <li toView="verComunicado" class="ver"><a href="#"><i class="icon-bullhorn"></i><i class="icon-chevron-right"></i>&nbsp;Comunicados<span class="badge badge-important">7</span></a></li> -->
+					<li toView="verComunicado" class="ver"><a href="#"><i class="icon-bullhorn"></i><i class="icon-chevron-right"></i>&nbsp;Comunicados</a></li>
+					<li toView="verEdoCuenta" class="ver"><a href="#"><i class="icon-book"></i><i class="icon-chevron-right"></i>&nbsp;Estados de Cuenta</a></a></li>
 
 				</ul>
 

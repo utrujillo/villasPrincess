@@ -111,3 +111,5 @@ table.table {
 }
 
 table .txtCenter{ text-align: center; }
+
+#estadoCuentaxUser{ display: none; }

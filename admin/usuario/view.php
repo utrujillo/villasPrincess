@@ -2,7 +2,7 @@
         
         <?php 
                 include_once("../scripts/conecta.inc.php");
-                $conexion = new Conexion( "villas" );
+                $conexion = new Conexion();
                 $id = $_POST    ["id"];
 
                 $sqlFind  = "SELECT * FROM usuario_tbl WHERE idUsuario = ". $id;

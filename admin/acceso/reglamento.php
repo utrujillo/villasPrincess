@@ -27,8 +27,9 @@
 	    		<td><?php echo $fileReader->formatBytes( filesize($dir.$archivo) ); ?></td>
 	    		
 	    		<td class="txtCenter">
-	    			<!-- <a href="<?php echo $path; ?>" download="<?php echo $archivo; ?>" class="btn btn-villa"><i class="icon-download-alt icon-white"></i>&nbsp;Descargar</a>      -->
-                    <a href="scripts/download.php<?php echo "?f=". $archivo ."&folder=reglamento"; ?>" class="btn btn-villa"><i class="icon-download-alt icon-white"></i>&nbsp;Descargar</a>            
+                    <a href="scripts/download.php<?php echo "?f=". $archivo ."&folder=reglamento"; ?>" class="btn btn-villa" data-original-title="Descargar Archivo" data-placement="left" rel="tooltip" >
+                        <i class="icon-download-alt icon-white"></i>&nbsp;Descargar
+                    </a>            
 	    		</td>
 	    	</tr>
 

@@ -13,7 +13,7 @@ class login extends Conexion{
 		$this->pass = md5(trim($pwd));
 
 		if( !isset($this->conexion) )
-			$this->conexion( "villas" );
+			$this->conexion();
 	}
 	
 	public function validarUsuario(){

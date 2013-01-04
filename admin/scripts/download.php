@@ -8,7 +8,16 @@ if (!isset($_GET['f']) || empty($_GET['f'])) {
 }
 
 $folder = $_GET['folder'];
-$root = '../fileUploader/server/'. $folder .'/files/';
+
+if( isset($_GET['item']) ){
+
+    $root = '../fileUploader/server/'. $folder .'/files/'. $_GET['item'] .'/';
+
+}else{
+
+    $root = '../fileUploader/server/'. $folder .'/files/';
+
+}
 $file = basename($_GET['f']);
 
 $path = $root.$file;

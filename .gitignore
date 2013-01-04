@@ -1,1 +1,6 @@
 /admin/scripts/conecta.inc.php
+/admin/fileUploader/server/asamblea/files/
+/admin/fileUploader/server/comite/files/
+/admin/fileUploader/server/comunicado/files/
+/admin/fileUploader/server/estadoCuenta/files/
+/admin/fileUploader/server/reglamento/files/

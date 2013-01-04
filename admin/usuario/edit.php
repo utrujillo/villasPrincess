@@ -1,14 +1,18 @@
-        <div class="row-fluid">      
-        
         <?php 
-                include_once("../scripts/conecta.inc.php");
-                $conexion = new Conexion( "villas" );
-                $id = $_POST    ["id"];
 
+                include_once("../scripts/conecta.inc.php");
+                $conexion = new Conexion();
+                $id       = $_POST    ["id"];
+                $acceso   = base64_decode( $_POST['u'] );
+                
                 $sqlFind  = "SELECT * FROM usuario_tbl WHERE idUsuario = ". $id;
                 $dataFind = $conexion->consulta( $sqlFind );
                 $rowFind  = $dataFind->fetch_array( MYSQLI_ASSOC );
+
+
         ?>
+        
+        <div class="row-fluid">      
         
         <div id="statusForm"></div>
         <legend>Actualizar Usuario</legend>
@@ -67,6 +71,7 @@
                         </div>
                 </div>
                 
+                <?php if( $acceso == 'R' || $acceso == 'S' ): ?>
                 <div class="control-group">
                         <label class="control-label" for="Nivel de Acceso">Nivel de Acceso</label>
                         <div class="controls">
@@ -79,6 +84,7 @@
                                 </select>
                         </div>
                 </div>
+                <?php endif; ?>
 
                 <div class="control-group">
                 <label class="control-label" for="Solicitar"></label>

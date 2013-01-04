@@ -98,7 +98,7 @@ $(function(){
               $(document).on("click", ".editUser", function(){
                   
                   var idUser = $( this ).attr("toId");
-                  $.colorbox({ width:"50%", height:"650px", href: "usuario/edit.php", data: { id: idUser } });
+                  $.colorbox({ width:"50%", height:"650px", href: "usuario/edit.php", data: { id: idUser, u: $("#lvl").val() } });
 
               });
 
@@ -136,7 +136,8 @@ $(function(){
                                             message += '<strong><i class="icon-thumbs-up"></i>&nbsp;Felicidades!!</strong> ' + data;
                                             message += '</div>';
 
-                                             $("#displayContent").load("usuario/show.php");
+                                            if( $("#lvl").val() != "QQ==" )
+                                              $("#displayContent").load("usuario/show.php");
 
                                     }else{
                                             
@@ -157,6 +158,71 @@ $(function(){
                     
 
                   }); // #editUser
+              
+              // Formulario de Cambio de Contraseña
+              $(document).on("click", ".passUser", function(){
+                  
+                  var idUser = $( this ).attr("toId");
+                  $.colorbox({ width:"40%", height: '300px', href: "usuario/passUser.php", data: { id: idUser } });
+
+              });
+
+
+                  $(document).on("click", "#changePass", function( evt ){
+
+                      $("#statusForm").css("display","none");
+                      evt.preventDefault();
+
+                      var passwd = $("#password");
+                      if( passwd.val().length > 0 ){
+
+                          var allData = $("#frmChangePass").serializeArray();
+
+                          $.ajax({
+                              url: 'usuario/abcUsuario.php',
+                              type: 'POST',
+                              dataType: 'html',
+                              data: allData,
+                              success: function(data, textStatus, xhr) {
+                                    
+                                    if( data.length == 33 ){
+                                        
+                                            message = '<div class="alert alert-success">';
+                                            message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                            message += '<strong><i class="icon-thumbs-up"></i>&nbsp;Felicidades!!</strong> La contraseña del usuario ha sido cambiada';
+                                            message += '</div>';
+
+                                            if( $("#lvl").val() != "QQ==" )
+                                              $("#displayContent").load("usuario/show.php");
+
+                                    }else{
+                                            
+
+                                            message = '<div class="alert alert-error">';
+                                            message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                            message += '<strong><i class="icon-remove-sign"></i>&nbsp;Lo sentimos, ha ocurrido un error!!</strong><br />' + data;
+                                            message += '</div>';
+                    
+                                    }
+                                
+                                $( "#statusForm" ).fadeIn("slow").html( message );
+
+                              }//success
+
+                          });//ajax
+
+                      }else{
+
+                          message = '<div class="alert alert-info">';
+                          message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                          message += '<strong><i class="icon-remove-sign"></i>&nbsp;Debes introducir una contraseña!!</strong>';
+                          message += '</div>';
+
+                          $( "#statusForm" ).fadeIn("slow").html( message );
+
+                      }//if else
+                     
+                  });
 
               
               // Eliminar Usuario
@@ -195,6 +261,7 @@ $(function(){
             // ==================== FileUploader
             $("#uploadPDF").live("change",function(){
 
+                $("#estadoCuentaxUser").fadeOut('slow');
                 var urlSave = $( this ).val();
                 switch( urlSave ){
                   case "reglamento"   : $("#uploaderFile").load("fileUploader/reglamento.html");  break;
@@ -220,6 +287,17 @@ $(function(){
               case "verComunicado": $("#displayContent").load("acceso/comunicado.php"); break;
               case "verEdoCuenta" : $("#displayContent").load("acceso/estadoCuenta.php"); break;
             }            
+
+        });
+
+        //============================================================================
+        //                                               Estados de Cuenta por Usuario
+        //============================================================================
+        $(document).on("click", ".userEdoCnt", function( e ){
+
+            e.preventDefault();
+            var idUser = $( this ).attr("toId");
+            $.colorbox({ width:"50%", href: "acceso/userEdoCnt.php", data: { id: idUser } });
 
         });
 

@@ -9,17 +9,17 @@
                   <th>Telefono</th>
                   <th>Correo</th>
                   <th>Acceso</th>
-                  <th>Opciones</th>
+                  <th width="100">Opciones</th>
                 </tr>
         </thead>
                 
         <tbody>
                 <?php
                         include_once("../scripts/conecta.inc.php");
-                        $conexion = new Conexion( "villas" );
+                        $conexion = new Conexion();
                         
                         $sqlFind  = "SELECT idUsuario, concat(nombre,' ',apellidoPaterno,' ',apellidoMaterno) as nombreCompleto, usuario, noPropiedad, telefono, correoElectronico, nivelAcceso
-                                        FROM usuario_tbl WHERE nivelAcceso != 'R' AND estatus = '1' ";
+                                        FROM usuario_tbl WHERE nivelAcceso != 'R' AND estatus = '1' ORDER BY nivelAcceso ASC";
                         $dataFind = $conexion->consulta( $sqlFind );
                         while( $rowFind = $dataFind->fetch_array( MYSQLI_ASSOC ) ):
 
@@ -40,6 +40,7 @@
                             <td class="options txtCenter">
                                     <a href="#" rel="tooltip" data-placement="left" data-original-title="Ver datos" toId="<?php echo $rowFind['idUsuario']; ?>" class="viewUser"><i class="icon-eye-open"></i></a>&nbsp;
                                     <a href="#" rel="tooltip" data-placement="top" data-original-title="Editar datos" toId="<?php echo $rowFind['idUsuario']; ?>" class="editUser"><i class="icon-edit"></i></a>&nbsp;
+                                    <a href="#" rel="tooltip" data-placement="top" data-original-title="Cambiar contraseña" toId="<?php echo $rowFind['idUsuario']; ?>" class="passUser"><i class="icon-lock"></i></a>&nbsp;
                                     <a href="#myModal" data-toggle="modal" rel="tooltip" data-placement="top" data-original-title="Eliminar datos" toId="<?php echo $rowFind['idUsuario']; ?>" data-toggle="modal" class="deleteUser"><i class="icon-trash"></i></a>&nbsp;
                             </td>
                         </tr>
