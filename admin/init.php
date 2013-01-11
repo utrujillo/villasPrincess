@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
           </a>
 
-          <a class="brand" href="#"><img src="../img/logoVillasWhite.png" width="20" heigth="20" /></a>
+          <a class="brand" href="#"><img src="../img/logoVillasWhite25.png"  /></a>
 
           <a class="brand" href="#">Villas I Princess</a>
           <div class="nav-collapse collapse">
