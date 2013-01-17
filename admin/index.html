@@ -11,19 +11,17 @@
 	<div id="container">
 		
 		<div id="access-outside">
-			<div id="login-ribbon"><i class="icon-lock"></i></div>
-			
-			<div id="txtLogin">Villas Princess</div>
 			
 			<div id="access-inside">
+
 				<div id="formulario">
 					<form action="login.php" method="post" id="frmLogin">
 
 						<input type="text" name="user" id="user" placeholder="Usuario" required />
-						<input type="password" name="passwd" id="password" placeholder="Contraseña" required />
+						<input type="password" name="passwd" id="password" placeholder="Contrase&ntilde;a" required />
 
 						<input type="submit" name="send" id="send" value="Ingresar" />
-
+						
 						<div id="txtError"></div>
 
 					</form>
@@ -60,6 +58,10 @@
 				  type: 'POST',
 				  dataType: 'json',
 				  data: allData,
+				  beforeSend: function(){
+				  	$("#txtError").fadeIn("slow")
+				  			.html( "Verificando información..." );
+				  },
 				  success: function(data, textStatus, xhr) {
 				  	
 				  	// console.log("Este fue el resultado" + data);
