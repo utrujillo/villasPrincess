@@ -53,7 +53,7 @@
 
         
         if( $conexion->consulta( $sql ) )
-                echo "Tu transacción ha sido completada";               
+                echo "Tu transaccion ha sido completada";               
 
 
 ?>

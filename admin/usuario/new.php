@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="control-group">
-                        <label class="control-label" for="Contraseña">* Contraseña</label>
+                        <label class="control-label" for="Contraseña">* Contrase&ntilde;a</label>
                         <div class="controls">
                                 <input type="password" maxlength="32" class="span12" name="password" id="password" required placeholder="Contraseña">
                         </div>
@@ -55,7 +55,7 @@
                 </div>
                 
                 <div class="control-group">
-                        <label class="control-label" for="noPropiedad">Numero de Propiedad</label>
+                        <label class="control-label" for="noPropiedad">N&uacute;mero de Propiedad</label>
                         <div class="controls">
                                 <input type="email" class="span12" name="noPropiedad" id="noPropiedad" placeholder="Numero de Propiedad">
                         </div>

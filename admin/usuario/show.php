@@ -40,7 +40,7 @@
                             <td class="options txtCenter">
                                     <a href="#" rel="tooltip" data-placement="left" data-original-title="Ver datos" toId="<?php echo $rowFind['idUsuario']; ?>" class="viewUser"><i class="icon-eye-open"></i></a>&nbsp;
                                     <a href="#" rel="tooltip" data-placement="top" data-original-title="Editar datos" toId="<?php echo $rowFind['idUsuario']; ?>" class="editUser"><i class="icon-edit"></i></a>&nbsp;
-                                    <a href="#" rel="tooltip" data-placement="top" data-original-title="Cambiar contraseña" toId="<?php echo $rowFind['idUsuario']; ?>" class="passUser"><i class="icon-lock"></i></a>&nbsp;
+                                    <a href="#" rel="tooltip" data-placement="top" data-original-title="Cambiar contrase&ntilde;a" toId="<?php echo $rowFind['idUsuario']; ?>" class="passUser"><i class="icon-lock"></i></a>&nbsp;
                                     <a href="#myModal" data-toggle="modal" rel="tooltip" data-placement="top" data-original-title="Eliminar datos" toId="<?php echo $rowFind['idUsuario']; ?>" data-toggle="modal" class="deleteUser"><i class="icon-trash"></i></a>&nbsp;
                             </td>
                         </tr>

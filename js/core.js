@@ -189,7 +189,7 @@ $(function(){
                                         
                                             message = '<div class="alert alert-success">';
                                             message += '<button type="button" class="close" data-dismiss="alert">×</button>';
-                                            message += '<strong><i class="icon-thumbs-up"></i>&nbsp;Felicidades!!</strong> La contraseña del usuario ha sido cambiada';
+                                            message += '<strong><i class="icon-thumbs-up"></i>&nbsp;Felicidades!!</strong> La contrase&ntilde;a del usuario ha sido cambiada';
                                             message += '</div>';
 
                                             if( $("#lvl").val() != "QQ==" )
@@ -215,7 +215,7 @@ $(function(){
 
                           message = '<div class="alert alert-info">';
                           message += '<button type="button" class="close" data-dismiss="alert">×</button>';
-                          message += '<strong><i class="icon-remove-sign"></i>&nbsp;Debes introducir una contraseña!!</strong>';
+                          message += '<strong><i class="icon-remove-sign"></i>&nbsp;Debes introducir una contrase&ntilde;a!!</strong>';
                           message += '</div>';
 
                           $( "#statusForm" ).fadeIn("slow").html( message );

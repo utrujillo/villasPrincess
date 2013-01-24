@@ -11,7 +11,7 @@
         ?>
         
         
-        <legend>Información de Usuario</legend>
+        <legend>Informaci&oacute;n de Usuario</legend>
         <table class="table table-striped table-blue-stripe table-hover">                       
                 <tbody>
                         <tr>

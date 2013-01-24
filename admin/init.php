@@ -34,8 +34,8 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-white"></i>&nbsp;Preferencias <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#" toId="<?php echo $_SESSION['iduser']; ?>" class="editUser">Actualizar Información</a></li>
-                  <li><a href="#" toId="<?php echo $_SESSION['iduser']; ?>" class="passUser">Cambiar Contraseña</a></li>
+                  <li><a href="#" toId="<?php echo $_SESSION['iduser']; ?>" class="editUser">Actualizar Informaci&oacute;n</a></li>
+                  <li><a href="#" toId="<?php echo $_SESSION['iduser']; ?>" class="passUser">Cambiar Contrase&ntilde;a</a></li>
                 </ul>
               </li>
               <li><a href="logout.php"><i class="icon-off icon-white"></i>&nbsp;Salir</a></li>
@@ -110,7 +110,7 @@
 		</div>
 
 	    <div class="modal-body">
-	    	<p>Si presionas <b>Eliminar</b> la información se perdera, estas seguro de querer realizar esta acción?</p>
+	    	<p>Si presionas <b>Eliminar</b> la informaci&oacute;n se perdera, estas seguro de querer realizar esta acci&oacute;n?</p>
 	    </div>
 
 	    <div class="modal-footer">

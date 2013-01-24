@@ -11,7 +11,7 @@
     <thead>
         <tr>
             <th>Archivo</th>
-            <th>Tamaño</th>
+            <th>Tama&ntilde;o</th>
             <th colspan="2"></th>
         </tr>
     </thead>
