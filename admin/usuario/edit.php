@@ -25,21 +25,21 @@
                 <div class="control-group">
                         <label class="control-label" for="Nombre">* Nombre</label>
                         <div class="controls">
-                                <input type="text" class="span12" name="nombre" id="nombre" required placeholder="Nombre" value="<?php echo $rowFind['nombre']; ?>" />
+                                <input type="text" class="span12" name="nombre" id="nombre" required placeholder="Nombre" value="<?php echo utf8_decode( $rowFind['nombre'] ); ?>" />
                         </div>
                 </div>
 
                 <div class="control-group">
                         <label class="control-label" for="Apellido Paterno">* Apellido Paterno</label>
                         <div class="controls">
-                                <input type="text" class="span12" name="apellidoPaterno" id="apellidoPaterno" required placeholder="Apellido Paterno" value="<?php echo $rowFind['apellidoPaterno']; ?>" />
+                                <input type="text" class="span12" name="apellidoPaterno" id="apellidoPaterno" required placeholder="Apellido Paterno" value="<?php echo utf8_decode( $rowFind['apellidoPaterno'] ); ?>" />
                         </div>
                 </div>
 
                 <div class="control-group">
                         <label class="control-label" for="Apellido Materno">Apellido Materno</label>
                         <div class="controls">
-                                <input type="text" class="span12" name="apellidoMaterno" id="apellidoMaterno" placeholder="Apellido Materno" value="<?php echo $rowFind['apellidoMaterno']; ?>" />
+                                <input type="text" class="span12" name="apellidoMaterno" id="apellidoMaterno" placeholder="Apellido Materno" value="<?php echo utf8_decode( $rowFind['apellidoMaterno'] ); ?>" />
                         </div>
                 </div>
 

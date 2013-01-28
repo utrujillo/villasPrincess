@@ -105,7 +105,7 @@
 		<input type="hidden" name="delHd" id="delHd" value="" />	
 			
 		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 			<h3 id="myModalLabel">Borrar datos</h3>
 		</div>
 

@@ -29,7 +29,7 @@ class login extends Conexion{
 
 			if( $this->pass == $rowFind["password"] ){
 				
-				$nombreUsuario = $rowFind["nombre"] ." ". $rowFind["apellidoPaterno"] ." ". $rowFind["apellidoMaterno"];
+				$nombreUsuario = utf8_decode( $rowFind["nombre"] ." ". $rowFind["apellidoPaterno"] ." ". $rowFind["apellidoMaterno"] );
 				$this->iniciarSesion($rowFind["idUsuario"], $nombreUsuario, $rowFind["nivelAcceso"] );
 
 			}else{

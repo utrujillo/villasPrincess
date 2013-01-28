@@ -32,7 +32,7 @@
                 
                         <tr>
                             <td><?php echo $rowFind["usuario"];  ?></td>
-                            <td><?php echo $rowFind["nombreCompleto"];  ?></td>
+                            <td><?php echo utf8_decode( $rowFind["nombreCompleto"] );  ?></td>
                             <td><?php echo $rowFind["noPropiedad"]; ?></td>
                             <td><?php echo $rowFind["telefono"]; ?></td>
                             <td><?php echo $rowFind["correoElectronico"]; ?></td>

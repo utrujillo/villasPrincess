@@ -36,7 +36,7 @@
                 <div class="control-group">
                         <label class="control-label" for="Contraseña">* Contrase&ntilde;a</label>
                         <div class="controls">
-                                <input type="password" maxlength="32" class="span12" name="password" id="password" required placeholder="Contraseña">
+                                <input type="password" maxlength="32" class="span12" name="password" id="password" required placeholder="Contrase&ntilde;a">
                         </div>
                 </div>
                 

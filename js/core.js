@@ -48,10 +48,11 @@ $(function(){
                           data: allData,
                           success: function(data, textStatus, xhr) {
                                 
-                                if( data.length == 33 ){
+                                // if( data.length == 33 ){
+                                  if( data.length == 34 ){
                                     
                                     message = '<div class="alert alert-success">';
-                                        message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                        message += '<button type="button" class="close" data-dismiss="alert">x</button>';
                                         message += '<strong><i class="icon-thumbs-up"></i>&nbsp;Felicidades!!</strong> ' + data;
                                         message += '</div>';
 
@@ -59,8 +60,8 @@ $(function(){
                                         
 
                                         message = '<div class="alert alert-error">';
-                                        message += '<button type="button" class="close" data-dismiss="alert">×</button>';
-                                        message += '<strong><i class="icon-remove-sign"></i>&nbsp;Lo sentimos, ha ocurrido un error!!</strong><br />' + data;
+                                        message += '<button type="button" class="close" data-dismiss="alert">x</button>';
+                                        message += '<strong><i class="icon-remove-sign"></i>&nbsp;Lo sentimos ha ocurrido un error!!</strong><br />' + data;
                                         message += '</div>';
                 
                                 }
@@ -128,11 +129,11 @@ $(function(){
                               dataType: 'html',
                               data: allData,
                               success: function(data, textStatus, xhr) {
-                                    
-                                    if( data.length == 33 ){
+                                    // if( data.length == 33 ){
+                                      if( data.length == 34 ){
                                         
                                             message = '<div class="alert alert-success">';
-                                            message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                            message += '<button type="button" class="close" data-dismiss="alert">x</button>';
                                             message += '<strong><i class="icon-thumbs-up"></i>&nbsp;Felicidades!!</strong> ' + data;
                                             message += '</div>';
 
@@ -143,7 +144,7 @@ $(function(){
                                             
 
                                             message = '<div class="alert alert-error">';
-                                            message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                            message += '<button type="button" class="close" data-dismiss="alert">x</button>';
                                             message += '<strong><i class="icon-remove-sign"></i>&nbsp;Lo sentimos, ha ocurrido un error!!</strong><br />' + data;
                                             message += '</div>';
                     
@@ -185,10 +186,11 @@ $(function(){
                               data: allData,
                               success: function(data, textStatus, xhr) {
                                     
-                                    if( data.length == 33 ){
+                                    // if( data.length == 33 ){
+                                      if( data.length == 34 ){
                                         
                                             message = '<div class="alert alert-success">';
-                                            message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                            message += '<button type="button" class="close" data-dismiss="alert">x</button>';
                                             message += '<strong><i class="icon-thumbs-up"></i>&nbsp;Felicidades!!</strong> La contrase&ntilde;a del usuario ha sido cambiada';
                                             message += '</div>';
 
@@ -199,7 +201,7 @@ $(function(){
                                             
 
                                             message = '<div class="alert alert-error">';
-                                            message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                                            message += '<button type="button" class="close" data-dismiss="alert">x</button>';
                                             message += '<strong><i class="icon-remove-sign"></i>&nbsp;Lo sentimos, ha ocurrido un error!!</strong><br />' + data;
                                             message += '</div>';
                     
@@ -214,7 +216,7 @@ $(function(){
                       }else{
 
                           message = '<div class="alert alert-info">';
-                          message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+                          message += '<button type="button" class="close" data-dismiss="alert">x</button>';
                           message += '<strong><i class="icon-remove-sign"></i>&nbsp;Debes introducir una contrase&ntilde;a!!</strong>';
                           message += '</div>';
 
